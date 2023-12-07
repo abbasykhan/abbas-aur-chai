@@ -1,12 +1,13 @@
-import { useState } from 'react'
+import { useState ,useEffect} from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
   
-
+ 
   let [counter, setCounter]=useState(0)
+
   const addValue=()=>{
    let moreValue= counter<5 ? counter+1 : 5;
     setCounter( moreValue);
@@ -15,6 +16,10 @@ function App() {
     const newValue = counter > 0 ? counter - 1 : 0;
     setCounter(newValue);
   }
+  useEffect(()=>{
+   console.log("counter increades")
+   },[counter])
+  
   return (
     <>
     <h1>Chai aur React</h1>
