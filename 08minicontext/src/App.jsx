@@ -1,6 +1,5 @@
 
 import './App.css'
-import UserContextProvider from './context/userContextProvider'
 import Login from './components/Login'
 import Profile from './components/Profile'
 
